@@ -58,7 +58,7 @@ body {
   background-color: var(--color-blue-1);
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100vw;
 }
 
 .headline {
@@ -103,7 +103,7 @@ body {
   padding-top: 20px;
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 100vw;
 }
 
 .login {
@@ -168,6 +168,9 @@ body {
   background-color: var(--color-grey-2);
   border-radius: 5px;
   height: 30px;
+  padding-left: 10px;
+  color: var(--color-grey-1);
+  border: 1px solid;
 }
 
 .containerRegistar {
@@ -202,6 +205,9 @@ body {
   background-color: var(--color-grey-2);
   border-radius: 5px;
   height: 30px;
+  padding-left: 10px;
+  color: var(--color-grey-1);
+  border: 1px solid;
 }
 
 .btnCadastrar{
@@ -217,4 +223,10 @@ body {
 }
 .btnCadastrar:hover, .btnEntrar:hover {
   background-color: var(--color-primary-Focus);
+}
+
+.containerLivros{
+  padding: 20px;
+  background-color: var(--color-blue-1);
+  height: 100%;
 }
