@@ -1,17 +1,19 @@
-import { useState } from 'react'
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './routes/login';
+import HomePage from './routes/home';
+import RegisterPage from './routes/register';
+import './styles/globals.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  setCount(1);
-  console.log(count);
-  return (
-    <>
-      <div>
-        <h3>Teste Frontend PL </h3>
-      </div>
-    </>
-  )
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<LoginPage/>} />
+				<Route path="/register" element={<RegisterPage/>} />
+				<Route path="/home" element={<HomePage/>} />
+			</Routes>
+		</Router>
+	);
 }
 
-export default App
+export default App;
