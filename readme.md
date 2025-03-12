@@ -1,35 +1,100 @@
-## INSTRUÇÕES PARA O TESTE TÉCNICO
+# 📚 Projeto Biblioteca - React
 
-- Crie um fork deste projeto (https://github.com/CAPYS-IT/TestePlenoFrontend).
-  É preciso estar logado na sua conta Github;
-- Quando você começar, faça um commit vazio com a mensagem "Iniciando o teste de tecnologia" e quando terminar, faça o commit com uma mensagem "Finalizado o teste de tecnologia";
-- Commit após cada ciclo de refatoração pelo menos;
-- Não use branches;
-- Você deve prover evidências suficientes de que sua solução está completa indicando, no mínimo, que ela funciona;
-- Não há restrição quanto ao uso de bibliotecas de apoio;
-- No final envie para o RH o link do seu projeto.
-- Os arquivos de Mocks estão salvos na pasta src/mocks
-- O link para acesso ao arquivo Figma: (https://www.figma.com/design/pn0n2pyoyKHTwcYSTgwpxq/Teste-Capys?node-id=13099-314&m=dev&t=XASy4RX6R3lgKpYS-1)
+Este é um projeto de uma aplicação React que exibe uma lista de livros com uma página de login e e umapágina de cadastro.
 
 ---
 
-## O TESTE
-
-- Criar layout de Login seguindo o protótipo Figma;
-- Criar layout da pagina home seguindo o protótipo Figma;
-
----
-
-## BÔNUS
-
-- Componentes bem estruturados
-- Uso de programas para mockar os dados como por exemplo mockoon. (carregar o arquivo json do mockoon junto com o projeto para avaliação)
+## 🚀 Tecnologias Utilizadas
+- **React** (com Vite)
+- **TypeScript**
+- **React Router** (para navegação entre páginas)
+- **React Toastify** (para exibir notificações)
 
 ---
 
-## PONTOS QUE SERÃO AVALIADOS
+## 📂 Estrutura do Projeto
+```
+📂 src/
+├── 📁 components/
+│   ├── 📁 body/
+│   ├── 📄 body.tsx  # Componente para mostar livros ou inforção de placeholder
+│   ├── 📁 cadastro/
+│   ├── 📄 cadastro.tsx  # Componente para cadastro de usuário
+│   ├── 📁 header/
+│   ├── 📄 header.tsx  # Componente para títulos principais
+│   ├── 📁 livros/
+│   ├── 📄 livros.tsx  # Componente para listar livros
+│   ├── 📁 login/
+│   ├── 📄 login.tsx  # Componente para realizar login
+│   ├── 📁 navbar/
+│   ├── 📄 navbar.tsx  # Componente para área de navegação
+├── 📁 Mocks/
+│   ├── 📄 livros.ts  # Dados estáticos dos livros
+├── 📁 routes/
+│   ├── 📄 home.tsx  # Página inicial
+│   ├── 📄 login.tsx  # Página de login
+│   ├── 📄 register.tsx  # Página de cadastro
+├── 📄 App.tsx  # Configuração das rotas
+└── 📄 main.tsx  # Arquivo principal
+```
 
-- Boas práticas;
-- Estrutura de código e pastas;
-- Layout;
-- Estilização;
+---
+
+## 🔧 Como Rodar o Projeto
+
+### 1️⃣ Clone o repositório
+```bash
+git clone https://github.com/seu-usuario/projeto-biblioteca.git
+```
+
+### 2️⃣ Acesse o diretório do projeto
+```bash
+cd projeto-biblioteca
+```
+
+### 3️⃣ Instale as dependências
+```bash
+npm install  # ou yarn install
+```
+
+### 4️⃣ Rode o projeto
+```bash
+npm run dev  # ou yarn dev
+```
+
+Acesse a aplicação em **http://localhost:5173** (ou outra porta que o Vite exibir no terminal).
+
+---
+
+## 🛠️ Funcionalidades
+✅ Listagem de livros a partir de um arquivo TypeScript.  
+✅ Cadastro e login com navegação entre páginas.  
+✅ Exibição de mensagens de erro e sucesso com **React Toastify**.  
+✅ Rotas protegidas e navegação com **React Router**.  
+
+---
+
+## 📜 Configuração das Rotas
+As rotas do projeto estão configuradas no arquivo **App.tsx**:
+```tsx
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import LoginPage from './routes/login';
+import HomePage from './routes/home';
+import RegisterPage from './routes/register';
+import './styles/globals.css'
+
+function App() {
+  return (
+    <Router>
+			<Routes>
+				<Route path="/" element={<LoginPage/>} />
+				<Route path="/register" element={<RegisterPage/>} />
+				<Route path="/home" element={<HomePage/>} />
+			</Routes>
+		</Router>
+  );
+}
+export default App;
+```
+
+---
