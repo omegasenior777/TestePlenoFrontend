@@ -44,12 +44,12 @@ Este é um projeto de uma aplicação React que exibe uma lista de livros com um
 
 ### 1️⃣ Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/projeto-biblioteca.git
+git clone https://github.com/seu-usuario/TestePlenoFrontend.git
 ```
 
 ### 2️⃣ Acesse o diretório do projeto
 ```bash
-cd projeto-biblioteca
+cd TestePlenoFrontend
 ```
 
 ### 3️⃣ Instale as dependências
